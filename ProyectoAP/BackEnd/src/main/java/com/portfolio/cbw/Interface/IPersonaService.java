@@ -3,11 +3,13 @@ package com.portfolio.cbw.Interface;
 import com.portfolio.cbw.Entity.Persona;
 import java.util.List;
 
+
+
 public interface IPersonaService {
-    //Traer una lista de personas
+    //Traer una persona
     public List<Persona> getPersona();
     
-    //Guardar un objeto de tipo Persona
+    //Guardar un objeto de tipo persona
     public void savePersona(Persona persona);
     
     //Eliminar un objeto buscando por ID
