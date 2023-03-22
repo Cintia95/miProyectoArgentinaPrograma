@@ -1,15 +1,23 @@
+<div class="botonera">
+    
+</div>
 <div class="row">
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <img id="fotoperfil"src="../../../assets/foto-perfil.jpeg" class="img-fluid" alt="foto de perfil">
-        </div>
+        <img id="fotoperfil"src={{persona.img}} class="img-fluid" alt="foto de perfil">
+    </div>
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
         <p id="nombre">{{persona.nombre}} {{persona.apellido}}</p>
         <p>Desarrolladora Web FullStack Jr</p>
     </div>
-    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
         <span>
             <h2>Acerca de mí</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque ullam dolores minima, sunt soluta qui corrupti est nam. Rerum cum voluptatem nihil iste hic. Deleniti alias aliquid repellat. Iste, aut.</p>
+            <p>{{persona.descripcion}}</p>
         </span>
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+        <button type="button" class="btn btn-dark nuevo" routerLink="/editacercade" *ngIf="isLogged">
+            <i class="bi bi-pencil-fill"></i>
+        </button>
     </div>
 </div>

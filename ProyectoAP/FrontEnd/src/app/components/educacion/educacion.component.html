@@ -1,50 +1,29 @@
 <div class="row">
-    <h2>Educación</h2>
-    <div class="col-lg-1"></div>
-    <div class="col-lg-11">
-        <ul>
-            <li>
-                <b>CodeIOT</b>
-                <ul>
-                    <li>Aprendiendo a programar (2020)</li>
-                    <li>Aplicaciones para dispositivos móviles (2020)</li>
-                </ul>
-            </li>
-            <li>
-                <b>Polotic Misiones</b>
-                <ul>
-                    <li>Inglés para desarrollo de software (2020)</li>
-                    <li>programación web php (2020)</li>
-                </ul>
-            </li>
-            <li>
-                <b>Silicon Misiones</b>
-                <ul>
-                    <li>Introducción a la programación y diseño de aplicaciones (2021)</li>
-                    <li>Desarrollador web full stack (2021)</li>
-                    <li>Data science for analytics (2021)</li>
-                </ul>
-            </li>
-            <li>
-                <b>Codo a codo</b>
-                <ul>
-                    <li>Desarrollo web fullstack php (2021)</li>
-                </ul>
-            </li>
-            <li>
-                <b>Universidad Tecnológica Nacional</b>
-                <ul>
-                    <li>Php y mysql avanzado (2021)</li>
-                </ul>
-            </li>
-            <li>
-                <b>Universidad del conocimiento</b>
-                <ul>
-                    <li>Introducción al diseño UX/UI (2021)</li>
-                    <li>Desarrollo y diseño inicial de aplicaciones (2021)</li>
-                </ul>
-            </li>
-        </ul>
+    <h2>Educacion</h2>
+    <div class="col-lg-2 col-md-2">
+        <button type="button" class="btn btn-dark nuevo" routerLink="/nuevaedu" *ngIf="isLogged">
+            <i class="bi bi-plus-circle"></i> Educacion
+        </button>
     </div>
-</div>
+    <div class="tabla">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Educacion of educacion">
+                    <td>
+                        <h5>{{Educacion.nombreE}}</h5>
+                    </td>
+                    <td><span>{{Educacion.descripcionE}}</span></td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
+                            <i class="bi bi-pencil-fill"></i></button>
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-danger" (click)="delete(Educacion.id)">
+                            <i class="bi bi-trash-fill"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
+</div>

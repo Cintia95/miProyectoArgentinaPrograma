@@ -4,9 +4,11 @@
 }
 footer{
     margin-top: 20px;
-    color: #d8f0fc;
     font-size: 14px;
     display: flex;
     flex-direction: column;
     text-align: center;
+}
+.f{    
+    color: #d8f0fc;
 }

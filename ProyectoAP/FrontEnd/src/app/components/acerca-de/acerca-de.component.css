@@ -7,7 +7,17 @@ div{
 }
 #nombre{
     font-weight: bold;
+    font-size: 17px;
     margin-top: 15px;
+}
+.botonera{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.nuevo{
+    background-color: #071b5d;
+    margin-top: 10px;
 }
 
 @media (min-width:576px){
